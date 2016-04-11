@@ -15,7 +15,7 @@ baseurl:          /
 
 author:
   name:           'Sean Montana'
-  url:            'https://twitter.com/SeanMontanaR'
+  url:            https://twitter.com/SeanMontanaR
 
 paginate:         5
 
