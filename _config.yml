@@ -1,10 +1,9 @@
 # Dependencies
 markdown:         redcarpet
-highlighter:      pygments
+# highlighter:      pygments
 
 # Permalinks
 permalink:        pretty
-relative_permalinks: true
 
 # Setup
 title:            Sean Montana
@@ -19,8 +18,7 @@ author:
 
 paginate:         5
 
-# Custom vars
-version:          2.1.0
-
 github:
   repo:           https://github.com/sromocki
+
+gems: [jekyll-paginate, jekyll-gist]
