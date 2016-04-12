@@ -1,6 +1,5 @@
 # Dependencies
-markdown:         redcarpet
-# highlighter:      pygments
+markdown:         kramdown
 
 # Permalinks
 permalink:        pretty
@@ -11,6 +10,7 @@ tagline:          '3 Things'
 description:      'Every day'
 url:              http://seanmontana.com
 baseurl:          /
+disqus_short_name: seanmontana
 
 author:
   name:           'Sean Montana'
