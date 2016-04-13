@@ -30,26 +30,32 @@
   <script type="text/javascript">
     var shortname = '{{ site.disqus_short_name }}';
 
-    function loadDisqus(source, postUrl, postIdentifier, postTitle) {
+    function loadDisqus(source, postUrl, postTitle) {
       if (window.DISQUS) {
-         $('#disqus_thread').insertAfter(source);
+         $( "#disqus_thread" ).remove();
+         source.parent().append('<div id="disqus_thread"></div>');
          /** if Disqus exists, call it's reset method with new parameters **/
 
           window.DISQUS.reset({
             reload: true,
             config: function () {
-              this.page.identifier = postIdentifier
+              this.page.identifier = postUrl;
               this.page.url = postUrl;
               this.page.title = postTitle;
             }
          });
       } else {
         //insert a wrapper in HTML after the relevant "show comments" link
-         $('<div id="disqus_thread"></div>').insertAfter(source);
+         source.parent().append('<div id="disqus_thread"></div>');
+         var disqus_shortname = shortname; // required: replace example with your forum shortname
+         var disqus_identifier = postUrl;
+         var disqus_url = postUrl;
+         var disqus_title = postTitle;
          var disqus_config = function () {
            this.page.url = postUrl;
-           this.page.identifier = postIdentifier;
+           this.page.identifier = postUrl;
            this.page.title = postTitle;
+           this.shortname = shortname;
          };
          //append the Disqus embed script to HTML
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

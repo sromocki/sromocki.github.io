@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Three Things &#35;1
-disqus_identifier: 10000
+title: Three Things 3
+disqus_identifier: 10003
 comments: true
 categories: ['coding']
 ---

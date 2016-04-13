@@ -17,8 +17,8 @@ comments: true
     <span class="post-date">{{ post.date | date_to_string }}</span>
     {{ post.content }}
     {% if post.comments %}
-      <div class="wrapper-1">
-        <button onclick="loadDisqus(jQuery(this), '{{ site.url }}{{ page.url }}', '{{ post.disqus_identifier}}', '{{ post.title }}')">Show comments</button>
+      <div class="wrapper wrapper-{{forloop.index}}">
+        <button onclick="loadDisqus(jQuery(this), '{{ site.url }}{{ post.url }}', '{{ post.title }}')">Show comments</button>
       </div>
     {% endif %}
   </div>
