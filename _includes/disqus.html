@@ -3,13 +3,9 @@
   var shortname = '{{ site.disqus_short_name }}';
   var disqus_config = function () {
     this.page.url = '{{ site.url }}{{ page.url }}';
-    this.page.identifier = ;
-    this.page.title = '{{ post.title }}'
+    this.page.identifier = '{{ site.url }}{{ post.url }}';
+    this.page.title = '{{ post.title }}';
     this.shortname = shortname;
-    console.log('Page URL:' + this.page.url);
-    console.log('Page Identifier:' + this.page.identifier);
-    console.log('Page Title:' + this.page.title);
-    console.log('Shortname:' + this.shortname);
   };
   (function () {
     var embedScript = document.createElement('script');
@@ -18,11 +14,11 @@
     embedScript.src = 'http://' + shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(embedScript);
 
-    var countScript = document.createElement('script');
-    countScript.type = 'text/javascript';
-    countScript.async = true;
-    countScript.src = 'http://' + shortname + '.disqus.com/count.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(countScript);
+    // var countScript = document.createElement('script');
+    // countScript.type = 'text/javascript';
+    // countScript.async = true;
+    // countScript.src = 'http://' + shortname + '.disqus.com/count.js';
+    // (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(countScript);
   }());
 
 </script>
