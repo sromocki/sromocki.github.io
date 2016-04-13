@@ -1,0 +1,12 @@
+@media (min-width: 48em) {
+  .logo {
+    position: absolute;
+    right:  1rem;
+    bottom: 5rem;
+    left:   1rem;
+  }
+}
+
+table tr td:first-child {
+  white-space:nowrap;
+}

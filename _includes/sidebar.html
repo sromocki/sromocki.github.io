@@ -10,7 +10,7 @@
     </div>
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
+      <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Three Things</a>
 
       {% comment %}
         The code below dynamically generates a sidebar nav of pages with
@@ -28,6 +28,9 @@
 
     </nav>
 
+  </div>
+  <div class="container logo">
+    <img src="/images/seanmontanalogo.png"/>
   </div>
   <div class="container sidebar-sticky-bot">
     <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
