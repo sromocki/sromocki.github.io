@@ -4,6 +4,7 @@ title: Home
 comments: true
 ---
 
+
 <div class="posts">
   {% for post in paginator.posts %}
   <div class="post">
@@ -14,10 +15,11 @@ comments: true
     </h1>
 
     <span class="post-date">{{ post.date | date_to_string }}</span>
-
     {{ post.content }}
     {% if post.comments %}
-      {% include disqus.html %}
+      <div class="wrapper-1">
+        <button onclick="loadDisqus(jQuery(this), '{{ site.url }}{{ page.url }}', '{{ post.disqus_identifier}}', '{{ post.title }}')">Show comments</button>
+      </div>
     {% endif %}
   </div>
   {% endfor %}

@@ -6,7 +6,7 @@ comments: true
 categories: ['coding']
 ---
 
-1.  
+1.  CNAME Records
 
 2.  
 

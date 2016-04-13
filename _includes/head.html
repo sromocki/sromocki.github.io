@@ -26,4 +26,37 @@
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script type="text/javascript">
+    var shortname = '{{ site.disqus_short_name }}';
+
+    function loadDisqus(source, postUrl, postIdentifier, postTitle) {
+      if (window.DISQUS) {
+         $('#disqus_thread').insertAfter(source);
+         /** if Disqus exists, call it's reset method with new parameters **/
+
+          window.DISQUS.reset({
+            reload: true,
+            config: function () {
+              this.page.identifier = postIdentifier
+              this.page.url = postUrl;
+              this.page.title = postTitle;
+            }
+         });
+      } else {
+        //insert a wrapper in HTML after the relevant "show comments" link
+         $('<div id="disqus_thread"></div>').insertAfter(source);
+         var disqus_config = function () {
+           this.page.url = postUrl;
+           this.page.identifier = postIdentifier;
+           this.page.title = postTitle;
+         };
+         //append the Disqus embed script to HTML
+         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+         dsq.src = 'http://' + shortname + '.disqus.com/embed.js';
+         $('head').append(dsq);
+      }
+    };
+
+  </script>
 </head>

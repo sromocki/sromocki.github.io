@@ -1,13 +1,16 @@
 <div id="disqus_thread"></div>
 <script type="text/javascript">
-    var shortname = '{{ site.disqus_short_name }}';
-    var disqus_config = function () {
-        this.page.url = '{{ site.url }}{{ page.url }}';
-        this.page.identifier = '{% if page.disqus_identifier %}{{ page.disqus_identifier}}{% else %}{{ site.url }}{{ page.url }}{% endif %}';
-        this.page.title = '{{ post.title }}'
-        this.shortname = shortname;
-        //this.developer = 1;
-    };
+  var shortname = '{{ site.disqus_short_name }}';
+  var disqus_config = function () {
+    this.page.url = '{{ site.url }}{{ page.url }}';
+    this.page.identifier = ;
+    this.page.title = '{{ post.title }}'
+    this.shortname = shortname;
+    console.log('Page URL:' + this.page.url);
+    console.log('Page Identifier:' + this.page.identifier);
+    console.log('Page Title:' + this.page.title);
+    console.log('Shortname:' + this.shortname);
+  };
   (function () {
     var embedScript = document.createElement('script');
     embedScript.type = 'text/javascript';
@@ -21,5 +24,6 @@
     countScript.src = 'http://' + shortname + '.disqus.com/count.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(countScript);
   }());
+
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
