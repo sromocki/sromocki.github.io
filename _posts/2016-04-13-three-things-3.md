@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Three Things 2
+title: Three Things 3
 comments: true
 categories: [coding]
 ---
 
-1.  A Records
+1.  CNAME Records
 
 2.  
 

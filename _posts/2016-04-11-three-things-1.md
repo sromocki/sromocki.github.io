@@ -1,9 +1,8 @@
 ---
 layout: post
-title: Three Things 3
-disqus_identifier: 10003
+title: Three Things 1
 comments: true
-categories: ['coding']
+categories: [coding]
 ---
 
 1.  CNAME Records

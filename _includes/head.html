@@ -29,6 +29,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script type="text/javascript">
     var shortname = '{{ site.disqus_short_name }}';
+    var disqus_identifier; //made of post id and guid
+    var disqus_url; //post permalink
+    var disqus_title;
 
     function loadDisqus(source, postUrl, postTitle) {
       if (window.DISQUS) {
@@ -48,15 +51,10 @@
         //insert a wrapper in HTML after the relevant "show comments" link
          source.parent().append('<div id="disqus_thread"></div>');
          var disqus_shortname = shortname; // required: replace example with your forum shortname
-         var disqus_identifier = postUrl;
-         var disqus_url = postUrl;
-         var disqus_title = postTitle;
-         var disqus_config = function () {
-           this.page.url = postUrl;
-           this.page.identifier = postUrl;
-           this.page.title = postTitle;
-           this.shortname = shortname;
-         };
+         disqus_identifier = postUrl;
+         disqus_url = postUrl;
+         disqus_title = postTitle;
+         
          //append the Disqus embed script to HTML
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
          dsq.src = 'http://' + shortname + '.disqus.com/embed.js';
