@@ -7,10 +7,10 @@ categories: [threethings, coding, dns]
 
 1.  Domain Name Registrars
 
-* [Namecheap](www.namecheap.com)
-* [1&1](https://www.1and1.com/)
-* [BlueHost](https://www.bluehost.com/)
-* [HostWinds](https://www.hostwinds.com/)
+    * [Namecheap](www.namecheap.com) - where this domain is managed
+    * [1&1](https://www.1and1.com/)
+    * [BlueHost](https://www.bluehost.com/) - buddies with Wordpress
+    * [HostWinds](https://www.hostwinds.com/)
 
 2.  [What's My DNS](https://www.whatsmydns.net/) - For checking DNS propogation changes
 
