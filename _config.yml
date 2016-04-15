@@ -9,6 +9,7 @@ title:            Sean Montana
 tagline:          '3 Things'
 description:      'Every day'
 url:              http://seanmontana.com
+categories: [threethings, coding, vibes, mailchimp, noms]
 baseurl:          /
 disqus_short_name: seanmontana
 
