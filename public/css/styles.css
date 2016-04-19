@@ -2,8 +2,13 @@
   .logo {
     position: absolute;
     right:  1rem;
-    bottom: 5rem;
+    bottom: 3rem;
     left:   1rem;
+  }
+
+  .logo > img {
+    height: 50px;
+    margin: 1rem 0 1rem 0;
   }
 }
 
